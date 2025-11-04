@@ -17,7 +17,12 @@ import user4 from "../assets/user4.webp";
 import user5 from "../assets/user5.webp";
 import user6 from "../assets/user6.webp";
 
-export const LINKS = [
+export interface navLinks {
+  name: string,
+  link: string
+}
+
+export const LINKS:navLinks[] = [
   {
     name: "Services",
     link: "#services",
@@ -40,13 +45,26 @@ export const LINKS = [
   },
 ];
 
-export const HERO_CONTENT = {
+export interface heroContent {
+  title: string,
+  subtitle: string,
+  image: any
+}
+
+export const HERO_CONTENT:heroContent = {
   title: "VastuSpaze",
   subtitle: "Reimagine Your Space with Expert Renovation Services",
   image: hero,
 };
 
-export const SERVICES_CONTENT = [
+export interface servicesContent {
+  title: string,
+  description: string,
+  image: any,
+  alt: string
+}
+
+export const SERVICES_CONTENT:servicesContent[] = [
   {
     title: "Kitchen Renovation",
     description:
@@ -70,7 +88,15 @@ export const SERVICES_CONTENT = [
   },
 ];
 
-export const PORTFOLIO_PROJECTS = [
+export interface portfolioProjects {
+  id: number,
+  name: string,
+  description: string,
+  image: any,
+  link: string
+}
+
+export const PORTFOLIO_PROJECTS:portfolioProjects[] = [
   {
     id: 1,
     name: "Modern Kitchen Renovation",
@@ -121,7 +147,19 @@ export const PORTFOLIO_PROJECTS = [
   },
 ];
 
-export const REVIEWS = {
+export interface reviews {
+    name: string,
+    title: string,
+    review: string,
+    image: any
+}
+
+export interface reviewsContent {
+  text: string,
+  reviews: reviews[]
+}
+
+export const REVIEWS:reviewsContent = {
   text: "Hear what our clients have to say about their experiences with VastuSpaze. We take pride in our work and are committed to delivering top-notch home renovation services.",
   reviews: [
     {
@@ -168,6 +206,18 @@ export const REVIEWS = {
     },
   ],
 };
+
+export interface contactField {
+  lable: string,
+  value: string
+}
+
+export interface contactInfo {
+  text: string
+  phone: contactField,
+  email: contactField,
+  address: contactField
+}
 
 export const CONTACT_INFO = {
   text: "Have questions or need more information? Get in touch with us, and we ll be happy to assist you.",
