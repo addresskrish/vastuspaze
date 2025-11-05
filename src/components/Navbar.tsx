@@ -29,6 +29,13 @@ const Navbar = () => {
                     ))}
                 </div>
             </div>
+            <div className={`${isOpen ? 'block' : 'hidden'} md:hidden absolute bg-neutral-50 w-full py-5 px-4 mt-4 border-b-4`}>
+                    {LINKS.map((link:navLinks, index:number) => (
+                        <a key={index} href={link.link} className="uppercase text-lg font-medium block py-2 tracking-wide">
+                            {link.name}
+                        </a>
+                    ))}
+            </div>
         </nav>
     )
 }
