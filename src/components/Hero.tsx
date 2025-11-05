@@ -2,7 +2,7 @@ import { HERO_CONTENT } from "../constants"
 
 const Hero = () => {
     return (
-        <section className="max-w-7xl mx-auto border-b-2">
+        <section className="max-w-7xl mx-auto border-b-2" id="hero">
             <div className="flex flex-col items-center my-20">
                 <h1 className="text-6xl lg:text-[10rem] uppercase p-2 font-bold">{HERO_CONTENT.title}</h1>
                 <p className="lg:mt-6 text-sm mb-4 font-medium tracking-tighter">
